@@ -31,23 +31,83 @@
 .ms-footer-bottom a:hover {
   color: #fff;
 }
-.img-card-200 {
-  width: 100%;
-  object-fit: contain;
-  max-height: 200px;
+.img-card-200 { 
+    width: 100%; 
+    object-fit: contain;
+    max-height: 400px;
+} 
+.img-card-400 { 
+    width: 100%; 
+    object-fit: contain;
+    max-height: 400px;
+} 
+html, body { 
+    height: 100%; 
+    margin: 0; 
+    overflow-x: hidden;
+} 
+.flex-grow-1 { 
+    flex: 1 0 auto; 
+} 
+footer { 
+    flex-shrink: 0; 
 }
-.img-card-400 {
-  width: 100%;
-  object-fit:contain;
-  max-height: 400px;
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-html, body {
-  height: 100%;
-  margin: 0;
+.card {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
-.flex-grow-1 {
-  flex: 1 0 auto;
+.card-img-top {
+    width: 100%;
+    object-fit: contain;
+    max-height: 400px;
 }
-footer {
-  flex-shrink: 0;
+@media (max-width: 768px) {
+    .img-card-200 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3; 
+        object-fit: contain;
+    }   
+    .img-card-400 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+        object-fit: contain;
+    }
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+        object-fit: contain;
+    }
+    .card {
+        border-radius: 8px;
+    }
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .row > [class*='col-'] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .img-card-200,
+    .img-card-400,
+    .card-img-top {
+        aspect-ratio: 2/3;
+        object-fit: contain;
+    }
+    .row > [class*='col-'] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
